@@ -42,16 +42,16 @@ const Header = () => {
         </div>
         <ul className="navigationContainer">
           <li>
-            <a href="">Ingreso / Login</a>
-          </li>
-          <li>
-            <a href="">Quienes Somos</a>
+            <a href="">Home</a>
           </li>
           <li>
             <a href="">Servicios</a>
           </li>
           <li>
-            <a href="">Blog / Comunidad</a>
+            <a href="">Proceso</a>
+          </li>
+          <li>
+            <a href="">Blog</a>
           </li>
         </ul>
       </div>
