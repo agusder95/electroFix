@@ -54,9 +54,8 @@
     width: 5rem;
     height: 3rem;
     border-radius: 5px;
-    background-color: $submitButton-color;
     &:disabled{
-      background-color: $submitDiseabledButton-color;
+      
       color: gray;
     }
   }
