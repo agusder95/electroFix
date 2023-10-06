@@ -18,9 +18,6 @@ killall -9 node
 
 Esta guía ha sido formulada con mucho cariño con el propósito de normalizar el código fuente realizado para el proyecto y clientes en Experiencia It, Se siguen convenciones estándares de HTML, CSS y JS pero se optimizan y normalizan varias reglas implícitas, dejando lugar al uso de criterio de cada integrante del equipo de desarrollo web.
 
-## link del repositorio GIT
-
-https://github.com/emilioQuilodran/electroServiceFront
 
 ## Branches y flujo de trabajo
 
