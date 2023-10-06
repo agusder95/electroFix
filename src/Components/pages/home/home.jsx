@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className='HomeWrapper'>
       <h1>Hola soy la Home</h1>
-      <h2>Páginas</h2>
+      <h2>Página</h2>
       <ul style={{padding: 0}}>
         <li style={{listStyle: "none", padding: 5}}><Link to="/user">Usuario</Link></li>
         <li style={{listStyle: "none", padding: 5}}><Link to="/employees">Empleados</Link></li>
