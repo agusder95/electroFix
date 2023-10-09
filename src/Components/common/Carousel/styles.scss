@@ -1,0 +1,23 @@
+@import "../../../scss/colors.scss";
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  .imageCarouselContainer {
+    height: 100%;
+    object-fit: fill;
+  }
+  .carousel-button {
+    position: absolute;
+    background-color: $transparent;
+    cursor: pointer;
+    width: 2rem;
+    height: 2.5rem;
+    border: none;
+   .Image{
+    z-index: 3;
+   } 
+}
+}

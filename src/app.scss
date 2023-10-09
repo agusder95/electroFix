@@ -1,5 +1,14 @@
-@import './scss/colors.scss';
-.App{
-     padding-top: 11rem;
-     background-color: $white;
+@import "./scss/colors.scss";
+.App {
+  padding-top: 11rem;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  .mainContent {
+    width: 100%;
+    max-width: 1080px;
+  }
 }

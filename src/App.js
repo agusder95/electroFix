@@ -9,9 +9,9 @@ import Materials from "./Components/pages/materials/materials";
 import Budget from "./Components/pages/budget/budget";
 import Reception from "./Components/pages/reception/reception";
 import Providers from "./Components/pages/providers/providers";
-import Footer from "./Components/pure/footer";
 import ClientList from "./Components/pages/client/clientList";
 import Header from "./Components/pure/header";
+import Footer from "./Components/pure/footer";
 import { useEffect } from "react";
 
 const App = () => {
@@ -24,18 +24,20 @@ const App = () => {
   return (
     <div className="App">
       <Header />
+      <div className="mainContent">
         <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/user" element={<User />} />
-        <Route path="/employees" element={<Employees />} />
-        <Route path="/client" element={<Client />} />
-        <Route path="/materials" element={<Materials />} />
-        <Route path="/budget" element={<Budget />} />
-        <Route path="/reception" element={<Reception />} />
-        <Route path="/providers" element={<Providers />} />
-        <Route path="/footer" element={<Footer />} />
-        <Route path="/clientList" element={<ClientList />} />
-      </Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/client" element={<Client />} />
+          <Route path="/materials" element={<Materials />} />
+          <Route path="/budget" element={<Budget />} />
+          <Route path="/reception" element={<Reception />} />
+          <Route path="/providers" element={<Providers />} />
+          <Route path="/clientList" element={<ClientList />} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 };
