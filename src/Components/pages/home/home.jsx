@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom'
 import './style.scss'
+import Sect1 from '../../sections/sectHome/sect1'
+import Sect2 from '../../sections/sectHome/sect2'
+import Sect3 from '../../sections/sectHome/sect3'
+import Sect4 from '../../sections/sectHome/sect4'
 const Home = () => {
   return (
     <div className='HomeWrapper'>
-      <h1>Hola soy la Home</h1>
+      <Sect1 />
+      <Sect2 />
+      <Sect3 />
+      <Sect4 />
       <h2>Página</h2>
       <ul style={{padding: 0}}>
         <li style={{listStyle: "none", padding: 5}}><Link to="/user">Usuario</Link></li>
