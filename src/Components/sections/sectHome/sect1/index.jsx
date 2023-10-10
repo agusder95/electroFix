@@ -6,6 +6,7 @@ import img1 from "../../../../assets/images/home/imageCarousel1.png"
 import img2 from "../../../../assets/images/home/imageCarousel2.png"
 import img3 from "../../../../assets/images/home/imageCarousel3.png"
 import img4 from "../../../../assets/images/home/imageCarousel4.png"
+import FormHome from "./formHome";
 
 const Sect1 =()=> {
      const images = [
@@ -18,7 +19,7 @@ const Sect1 =()=> {
           <section className="section1">
                <div className="block">
                     <Title text={"Solicitá AQUÍ Diagnóstico y/o visita"}/>
-                    Formulario
+                    <FormHome/>
                </div>
                <div className="block">
                     <Title text={"Nuestros servicios incluyen todas las marcas"}/>
