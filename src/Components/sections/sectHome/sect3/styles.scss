@@ -1,1 +1,57 @@
 @import "../../../../scss/colors.scss";
+
+
+.section3{
+
+
+    .block{
+    
+        width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+     // align-items: center;
+      margin-bottom: 2rem;
+    
+    .bl1tit, .bl2tit, .bl3tit, .bl4tit {
+    
+      height: 10rem;
+      
+      font-weight: bold; /* Para hacer la letra negrita */
+      font-size: 20px;
+      margin-right: 10;
+      margin-left: 100;
+      margin-bottom: 0;
+    }
+
+    img{
+        width: 50px; // Establece un ancho de 50 píxeles para la imagen
+        height: 50px; // Establece una altura de 50 píxeles para la imagen
+    //    margin: 5px; // Añade un margen de 5 píxeles alrededor de la imagen
+margin-bottom: 100px;
+    }
+
+    
+      
+        .bl1, .bl2, .bl3, .bl4 {
+            display: flex;
+        //      margin: 10px; //margen de un borde ovalado a otro
+              border: 1px solid $black; //redondeado del borde, mas px mas negro el redondeado
+            
+              max-width: calc(600px / 2.4); //borde ovalado envolviendo el texto, mas px mas lejos del texto
+              height: 10rem; //altura de un globo a otro
+            
+              border-radius: 10px; //borde ovalado
+            
+              align-items: center;
+            
+              margin-bottom: 10px;
+            }
+            
+    
+    
+    }
+    
+    
+    
+      }
