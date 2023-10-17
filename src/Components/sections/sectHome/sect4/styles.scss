@@ -1,22 +1,15 @@
 @import "../../../../scss/colors.scss";
 
-.section4{
+.section4 {
+  .title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-    
-    .title{
+  img {
+    width: 480px;
+    height: 300px;
 
-        width: 100%;
-       
-      }
-  
-
-
-img{
-
-    width:480px;
-    height:300px;
-
-    margin-left:300px;
-}
-
+    margin-left: 300px;
+  }
 }

@@ -1,116 +1,74 @@
 @import "../../../../scss/colors.scss";
 
-
-.section3{
-
-  
-  .title{
-
+.section3 {
+  .title {
     width: 100%;
-          margin-bottom: 20px;
-   
+    margin-bottom: 20px;
   }
 
+  .block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
+    margin-bottom: 2rem;
 
-    .block{
-    
-        width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    .bl1tit {
+      height: 40px;
 
-      margin-bottom: 2rem;
-
-
-
-
-.bl1tit{
-
-  height: 40px;
-      
-  font-weight: bold; /* Para hacer la letra negrita */
-  font-size: 20px;
-  margin-left: 90px;
-
-
-}
-
-.bl2tit{
-
-  height: 40px;
-      
-  font-weight: bold; /* Para hacer la letra negrita */
-  font-size: 20px;
-  margin-left: 70px;
-
-}
-
-.bl3tit{
-
-  height: 40px;
-      
-  font-weight: bold; /* Para hacer la letra negrita */
-  font-size: 20px;
-  margin-left: 85px;
-
-  
-
-}
-
-
-
-.bl4tit{
-
-  height: 40px;
-      
-  font-weight: bold; /* Para hacer la letra negrita */
-  font-size: 20px;
-  margin-left: 90px;
-  
-
-}
-
-
-
-
-
-    img{
-        width: 50px; // Establece un ancho de 50 píxeles para la imagen
-        height: 50px; // Establece una altura de 50 píxeles para la imagen
-
-
-        margin-left:100px;
-
-
-
+      font-weight: bold; /* Para hacer la letra negrita */
+      font-size: 20px;
+      margin-left: 90px;
     }
 
+    .bl2tit {
+      height: 40px;
 
-      
-        .bl1, .bl2,.bl3, .bl4 {
-
-              border: 1px solid $black; //redondeado del borde, mas px mas negro el redondeado
-            
-              max-width: calc(600px / 2.4); //borde ovalado envolviendo el texto, mas px mas lejos del texto
-              height: 10rem; //altura de un globo a otro
-            
-              border-radius: 10px; //borde ovalado
-            
-              align-items: center;
-            
-              margin-bottom: 10px;
-
-              
-            }
-
-         
-    
-
-    
-    
+      font-weight: bold; /* Para hacer la letra negrita */
+      font-size: 20px;
+      margin-left: 70px;
     }
-    
-    
-    
-      }
+
+    .bl3tit {
+      height: 40px;
+
+      font-weight: bold; /* Para hacer la letra negrita */
+      font-size: 20px;
+      margin-left: 85px;
+    }
+
+    .bl4tit {
+      height: 40px;
+
+      font-weight: bold; /* Para hacer la letra negrita */
+      font-size: 20px;
+      margin-left: 90px;
+    }
+
+    img {
+      width: 50px; // Establece un ancho de 50 píxeles para la imagen
+      height: 50px; // Establece una altura de 50 píxeles para la imagen
+
+      margin-left: 100px;
+    }
+
+    .bl1,
+    .bl2,
+    .bl3,
+    .bl4 {
+      border: 1px solid $black; //redondeado del borde, mas px mas negro el redondeado
+
+      max-width: calc(
+        600px / 2.4
+      ); //borde ovalado envolviendo el texto, mas px mas lejos del texto
+      height: 10rem; //altura de un globo a otro
+
+      border-radius: 10px; //borde ovalado
+
+      align-items: center;
+
+      margin-bottom: 10px;
+    }
+  }
+}
