@@ -3,6 +3,15 @@
 
 .section3{
 
+  
+  .title{
+
+    width: 100%;
+          margin-bottom: 20px;
+   
+  }
+
+
 
     .block{
     
@@ -10,32 +19,77 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-     // align-items: center;
+
       margin-bottom: 2rem;
-    
-    .bl1tit, .bl2tit, .bl3tit, .bl4tit {
-    
-      height: 10rem;
+
+
+
+
+.bl1tit{
+
+  height: 40px;
       
-      font-weight: bold; /* Para hacer la letra negrita */
-      font-size: 20px;
-      margin-right: 10;
-      margin-left: 100;
-      margin-bottom: 0;
-    }
+  font-weight: bold; /* Para hacer la letra negrita */
+  font-size: 20px;
+  margin-left: 90px;
+
+
+}
+
+.bl2tit{
+
+  height: 40px;
+      
+  font-weight: bold; /* Para hacer la letra negrita */
+  font-size: 20px;
+  margin-left: 70px;
+
+}
+
+.bl3tit{
+
+  height: 40px;
+      
+  font-weight: bold; /* Para hacer la letra negrita */
+  font-size: 20px;
+  margin-left: 85px;
+
+  
+
+}
+
+
+
+.bl4tit{
+
+  height: 40px;
+      
+  font-weight: bold; /* Para hacer la letra negrita */
+  font-size: 20px;
+  margin-left: 90px;
+  
+
+}
+
+
+
+
 
     img{
         width: 50px; // Establece un ancho de 50 píxeles para la imagen
         height: 50px; // Establece una altura de 50 píxeles para la imagen
-    //    margin: 5px; // Añade un margen de 5 píxeles alrededor de la imagen
-margin-bottom: 100px;
+
+
+        margin-left:100px;
+
+
+
     }
 
-    
+
       
-        .bl1, .bl2, .bl3, .bl4 {
-            display: flex;
-        //      margin: 10px; //margen de un borde ovalado a otro
+        .bl1, .bl2,.bl3, .bl4 {
+
               border: 1px solid $black; //redondeado del borde, mas px mas negro el redondeado
             
               max-width: calc(600px / 2.4); //borde ovalado envolviendo el texto, mas px mas lejos del texto
@@ -46,8 +100,13 @@ margin-bottom: 100px;
               align-items: center;
             
               margin-bottom: 10px;
+
+              
             }
-            
+
+         
+    
+
     
     
     }

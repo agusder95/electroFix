@@ -57,20 +57,26 @@ const Sect3 =()=> {
       
          <div className="bl3">
   
-         <div className="bl3tit">Eficiencia</div>
+
 
          <img src={img3} alt=""/>
+
+         <div className="bl3tit">Eficiencia</div>
                 <p >Agilizamos tu trabajo y anticipamos las entregas</p>
+
          </div>      
       
                  
       
          <div className="bl4">
-     
-         <div className="bl4tit">Calidad</div>
+
     
          <img src={img4} alt="" />
+
+              
+         <div className="bl4tit">Calidad</div>
                 <p >Estamos comprometidos con la calidad desde el primer contacto</p>
+                
          </div>      
       
       
