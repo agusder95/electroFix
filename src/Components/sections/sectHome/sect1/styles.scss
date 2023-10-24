@@ -1,13 +1,14 @@
 @import "../../../../scss/colors.scss";
 
 .section1 {
+  padding: 1rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-  background-image: url("../../../../assets/images/home/bk-section1-3.png");
+  background-color: $grey;
   .block {
     width: calc(100vw / 2.1);
     max-width: calc(1080px / 2.4);

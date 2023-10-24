@@ -1,74 +1,39 @@
 @import "../../../../scss/colors.scss";
 
 .section3 {
-  .title {
-    width: 100%;
-    margin-bottom: 20px;
+  background-color: $black;
+  height: 24rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 2rem;
+  #title{
+    color: $white;
   }
 
-  .block {
+  .cardSection {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0 2rem;
 
-    margin-bottom: 2rem;
-
-    .bl1tit {
-      height: 40px;
-
-      font-weight: bold; /* Para hacer la letra negrita */
-      font-size: 20px;
-      margin-left: 90px;
-    }
-
-    .bl2tit {
-      height: 40px;
-
-      font-weight: bold; /* Para hacer la letra negrita */
-      font-size: 20px;
-      margin-left: 70px;
-    }
-
-    .bl3tit {
-      height: 40px;
-
-      font-weight: bold; /* Para hacer la letra negrita */
-      font-size: 20px;
-      margin-left: 85px;
-    }
-
-    .bl4tit {
-      height: 40px;
-
-      font-weight: bold; /* Para hacer la letra negrita */
-      font-size: 20px;
-      margin-left: 90px;
-    }
-
-    img {
-      width: 50px; // Establece un ancho de 50 píxeles para la imagen
-      height: 50px; // Establece una altura de 50 píxeles para la imagen
-
-      margin-left: 100px;
-    }
-
-    .bl1,
-    .bl2,
-    .bl3,
-    .bl4 {
-      border: 1px solid $black; //redondeado del borde, mas px mas negro el redondeado
-
-      max-width: calc(
-        600px / 2.4
-      ); //borde ovalado envolviendo el texto, mas px mas lejos del texto
-      height: 10rem; //altura de un globo a otro
-
-      border-radius: 10px; //borde ovalado
-
-      align-items: center;
-
-      margin-bottom: 10px;
+    .cardSect3 {
+      color: $black;
+      &:nth-child(1) {
+        background-color: $white;
+      }
+      &:nth-child(2) {
+        background-color: $acent-color2;
+      }
+      &:nth-child(3) {
+        background-color: $secondary-color;
+      }
+      &:nth-child(4) {
+        background-color: $acent-color;
+      }
     }
   }
 }

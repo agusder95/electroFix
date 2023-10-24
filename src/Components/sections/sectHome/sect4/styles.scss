@@ -1,15 +1,16 @@
 @import "../../../../scss/colors.scss";
 
 .section4 {
-  .title {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+  background-color: $grey;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
 
-  img {
-    width: 480px;
-    height: 300px;
-
-    margin-left: 300px;
+  .imageSect4Container {
+    padding-top: 2rem;
+    width: 60%;
+    height: auto
   }
 }
