@@ -1,0 +1,24 @@
+.cardWrapper{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     border: 1px solid black;
+     border-radius: 24px;
+     width: 14rem;
+     height: 14rem;
+     padding-top: 2rem;
+     .ImageCardContainer{
+          width: 3rem;
+     }
+     .cardTxt{
+          flex-grow: 1;
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          h2{
+               font-weight: normal;
+          }
+     }
+     
+}

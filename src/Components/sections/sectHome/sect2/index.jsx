@@ -4,41 +4,39 @@ import Title from "../../../common/titleBar";
 const Sect2 = () => {
   return (
     <section className="section2">
+     <h2>Pasos a seguir para reparar tu electrodoméstico</h2>
+
       <div className="block">
-        <Title text={"Pasos a seguir para reparar tu electrodoméstico"} />
-
-        <div className="bl1">
-          <div className="bl1tit">1</div>
+        <div className="card">
+          <div className="cardtit">
+            <p>1</p>
+          </div>
           <p>
-            Contactános a través del <br />
-            formulario, deja tus datos y <br />
-            describí brevemente la situación.
-            <br /> También podes contactarnos a <br /> través del whatsapp
+            Contactános a través del formulario, deja tus datos y describí
+            brevemente la situación. También podes contactarnos a través del
+            whatsapp
           </p>
         </div>
 
-        <div className="bl2">
-          <div className="bl2tit">2</div>
+        <div className="card">
+          <div className="cardtit">
+            <p>2</p>
+          </div>
           <p>
-            Quedáte atento al correo que de <br />
-            inmediato de responderemos con
-            <br /> un numero de ticket y los días <br /> disponibles para una
-            visita, si es
-            <br /> necesaria. Te indicaremos las <br />
-            formas de pago para agendar la <br />
-            visita.
+            Quedáte atento al correo que de inmediato de responderemos con un
+            numero de ticket y los días disponibles para una visita, si es
+            necesaria. Te indicaremos las formas de pago para agendar la visita.
           </p>
         </div>
 
-        <div className="bl3">
-          <div className="bl3tit">3</div>
+        <div className="card">
+          <div className="cardtit">
+            <p>3</p>
+          </div>
           <p>
-            Una vez recibida tu confirmación,
-            <br /> recibirás un correo con los datos <br />
-            del técnico que te visitará.
-            <br /> Si decidís traer el equipo, te <br />
-            aseguramos el diagnóstico el
-            <br /> mismo día!
+            Una vez recibida tu confirmación, recibirás un correo con los datos
+            del técnico que te visitará. Si decidís traer el equipo, te
+            aseguramos el diagnóstico el mismo día!
           </p>
         </div>
       </div>

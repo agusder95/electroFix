@@ -1,43 +1,38 @@
 @import "../../../../scss/colors.scss";
 
 .section2 {
-  .title {
-    width: 100%;
-  }
+  background-color: $secondary-color;
+  height: 24rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 2rem;
 
   .block {
-    //  width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+    justify-content: space-evenly;
+    padding: 0 1rem;
 
-    .bl2tit,
-    .bl1tit,
-    .bl3tit {
-      // height: 11.20rem;
-      font-weight: bold; /* Para hacer la letra negrita */
-      font-size: 30px;
-      //margin: 2rem;
-      margin-top: -15px;
-      margin-left: 250px;
-    }
+    .card {
+      background-color: $white;
+      height: 11rem;
+      width: 18rem;
+      border-radius: 10px;
+      margin: 10px 0;
+      padding: 0 1rem;
 
-    .bl2,
-    .bl1,
-    .bl3 {
-      border: 1px solid $black; //redondeado del borde, mas px mas negro el redondeado
-
-      max-width: calc(
-        700px / 1.4
-      ); //borde ovalado envolviendo el texto, mas px mas lejos del texto
-      height: 10rem; //altura de un globo a otro
-
-      border-radius: 10px; //borde ovalado
-
-      margin-bottom: 10px;
-
-      margin-top: 10px;
+      .cardtit {
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: -15px;
+        margin-left: 250px;
+      }
+      p {
+        margin-top: auto;
+      }
     }
   }
 }
