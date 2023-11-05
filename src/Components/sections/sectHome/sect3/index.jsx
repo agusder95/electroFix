@@ -20,10 +20,30 @@ const Sect3 = () => {
       <h2 id="title">Por qué electroFix?</h2>
 
       <div className="cardSection">
-        <Card className="cardSect3" imge={img1} title="Garantía" txt="Garantizamos nuestros trabajos 100%" />
-        <Card className="cardSect3" imge={img2} title="Confiabilidad" txt="Nos caracteriza la seriedad y la puntualidad" />
-        <Card className="cardSect3" imge={img3} title="Eficiencia" txt="Agilizamos tu trabajo y anticipamos las entregas" />
-        <Card className="cardSect3" imge={img4} title="Calidad" txt="Estamos comprometidos con la calidad desde el primer contacto" />
+        <Card
+          className="cardSect3"
+          imge={img1}
+          title="Garantía"
+          txt="Garantizamos nuestros trabajos 100%"
+        />
+        <Card
+          className="cardSect3"
+          imge={img2}
+          title="Confiabilidad"
+          txt="Nos caracteriza la seriedad y la puntualidad"
+        />
+        <Card
+          className="cardSect3"
+          imge={img3}
+          title="Eficiencia"
+          txt="Agilizamos tu trabajo y anticipamos las entregas"
+        />
+        <Card
+          className="cardSect3"
+          imge={img4}
+          title="Calidad"
+          txt="Comprometidos con la calidad desde el primer contacto"
+        />
       </div>
     </section>
   );

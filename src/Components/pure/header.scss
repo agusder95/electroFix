@@ -1,6 +1,10 @@
 @import "../../scss/colors.scss";
 .header {
-  a{
+  ul {
+    margin-right: 29rem;
+  }
+
+  a {
     color: $white;
   }
   display: flex;
@@ -13,7 +17,7 @@
   z-index: 99;
   top: 0;
   transition: height 0.3s ease;
-  #logoContainer{
+  #logoContainer {
     height: 80%;
     align-self: center;
     margin-left: 2rem;
@@ -54,8 +58,7 @@
       }
     }
   }
-  &.shrink{
-     height: 5rem;
+  &.shrink {
+    height: 5rem;
   }
 }
-

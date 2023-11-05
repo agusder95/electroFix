@@ -1,28 +1,28 @@
 @import "../../scss/colors.scss";
 
-footer{
-     width: 100%;
-     position: static;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     background-color:$black;
-     color:$white;
-     height: 10rem;
-     h2{
-          margin-left: 6rem;
-     }
+footer {
+  width: 100%;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black;
+  color: $white;
+  height: 10rem;
+  h2 {
+    margin-left: 6rem;
+  }
 
-     ul{
-          display: flex;
-          li{
-               margin-right: 6rem;
-               a{
-                   width: 3rem;
-                   height: 3rem;
-               }
+  ul {
+    display: flex;
 
-               
-          }
-     }
+    li {
+      margin-right: 2rem;
+
+      a {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
 }
