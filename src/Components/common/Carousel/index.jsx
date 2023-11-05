@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.scss";
 import Image from "../Image";
-import arrowNext from "../../../assets/images/home/arrow-next.png"
+import arrowNext from "../../../assets/images/home/flechaDerecha.png";
 import Button from "../Button";
 
 const Carousel = ({ images }) => {
@@ -15,7 +15,7 @@ const Carousel = ({ images }) => {
         <Image src={images[courrentIndex]} className="carousel-image" />
       </div>
       <Button onClick={() => nextPage()} className="carousel-button">
-        <Image src={arrowNext} className="arrow"/>
+        <Image src={arrowNext} className="arrow" />
       </Button>
     </div>
   );

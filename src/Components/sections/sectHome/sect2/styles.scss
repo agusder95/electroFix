@@ -3,12 +3,17 @@
 .section2 {
   background-color: $secondary-color;
   height: 24rem;
-  padding-top: 1rem;
+  // padding-top: 1rem;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
   margin-bottom: 2rem;
+
+  .h2 {
+    padding-top: 1rem;
+  }
 
   .block {
     display: flex;
@@ -20,7 +25,7 @@
       background-color: $white;
       height: 11rem;
       width: 18rem;
-      border-radius: 10px;
+      //    border-radius: 10px;
       margin: 10px 0;
       padding: 0 1rem;
 

@@ -9,25 +9,31 @@
   justify-content: space-evenly;
   text-align: center;
   margin-bottom: 2rem;
-  #title{
+  #title {
     color: $white;
   }
 
   .cardSection {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    //  flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 2rem;
 
     .cardSect3 {
       color: $black;
+
       &:nth-child(1) {
         background-color: $white;
       }
       &:nth-child(2) {
         background-color: $acent-color2;
+
+        h2 {
+          font-size: 25px;
+        }
       }
+
       &:nth-child(3) {
         background-color: $secondary-color;
       }
