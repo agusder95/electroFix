@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./header.scss";
 import Logo from "../../assets/images/home/Logo.png";
-
+import Image from "../common/Image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+
+import UserIcon from "../../assets/images/home/UserIcon.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +39,12 @@ const Header = () => {
         <div className="loginContainer">
           <a href="">{user}</a>
           <div className="LogUser">
-            <FontAwesomeIcon icon={faUser} className="icon" />
+            
+         { /*  <FontAwesomeIcon icon={faUser} className="icon" /> */}
+
+         <Image src={UserIcon} className="arrow" />
+
+
           </div>
         </div>
         <ul className="navigationContainer">

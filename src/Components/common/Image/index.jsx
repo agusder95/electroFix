@@ -1,6 +1,6 @@
-import "./styles.scss"
+import "./styles.scss";
 const Image = ({ src }) => {
   return <img src={src} alt="src" />;
 };
 
-export default Image
+export default Image;

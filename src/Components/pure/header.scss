@@ -1,11 +1,11 @@
 @import "../../scss/colors.scss";
 .header {
-  ul {
-    margin-right: 29rem;
-  }
 
-  a {
+
+
+  a{
     color: $white;
+
   }
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,7 @@
   z-index: 99;
   top: 0;
   transition: height 0.3s ease;
-  #logoContainer {
+  #logoContainer{
     height: 80%;
     align-self: center;
     margin-left: 2rem;
@@ -35,30 +35,47 @@
       }
       .LogUser {
         margin-right: 4rem;
-        border: 1px solid $white;
+  //      border: 1px solid $white;
         border-radius: 100%;
         width: 2rem;
         height: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        
         .icon {
           color: $white;
           width: 1.5rem;
           height: 1.5rem;
         }
+
+        img{
+          color: $white;
+          width: 50rem;
+          height: 50rem;
+     //     border: 1px solid $white;
+
+        }
+
+
+
       }
     }
     .navigationContainer {
       display: flex;
       flex-direction: row;
+      margin-right:22rem;
+
+
+      
 
       li {
         margin-right: 5rem;
       }
     }
   }
-  &.shrink {
-    height: 5rem;
+  &.shrink{
+     height: 5rem;
   }
 }
+
