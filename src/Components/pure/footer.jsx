@@ -10,9 +10,8 @@ const Footer = () => {
   return (
     <footer>
 
-<div className="icono-flotante">
-<ImageFlot src={wspIcon} />
-    </div>
+
+
 
       <h2>ElectroGestión - 2023</h2>
       <div className="socMedia">

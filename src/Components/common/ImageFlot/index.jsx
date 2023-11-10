@@ -1,14 +1,10 @@
-import "./styles.scss"
+import "./styles.scss";
 const ImageFlot = ({ src }) => {
-
-  return(
-  <div className="icono-flotante">
-
-<img src={src} alt="src" />
-
-  </div>
-
-);
+  return (
+    <div className="icono-flotante">
+      <img src={src} alt="src" />
+    </div>
+  );
 };
 
-export default ImageFlot
+export default ImageFlot;

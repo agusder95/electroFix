@@ -13,6 +13,8 @@ import ClientList from "./Components/pages/client/clientList";
 import Header from "./Components/pure/header";
 import Footer from "./Components/pure/footer";
 import { useEffect } from "react";
+import wspIcon from "../src/assets/images/home/whatsapp.png";
+import ImageFlot from "../src/Components/common/ImageFlot";
 
 const App = () => {
   const location = useLocation();
@@ -28,14 +30,18 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/user" element={<User />} />
-          <Route path="/employees" element={<Employees />} />
+          <Route path="/employees" element={<Employees />} />import ImageFlot from "../common/ImageFlot";import wspIcon from "../../assets/images/home/whatsapp.png";
           <Route path="/client" element={<Client />} />
           <Route path="/materials" element={<Materials />} />
           <Route path="/budget" element={<Budget />} />
           <Route path="/reception" element={<Reception />} />
           <Route path="/providers" element={<Providers />} />
           <Route path="/clientList" element={<ClientList />} />
+        
         </Routes>
+
+        <ImageFlot src={wspIcon} />
+
       </div>
       <Footer />
     </div>

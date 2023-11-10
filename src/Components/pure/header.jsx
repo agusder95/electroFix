@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import "./header.scss";
 import Logo from "../../assets/images/home/Logo.png";
 import Image from "../common/Image";
+
+
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 import UserIcon from "../../assets/images/home/UserIcon.png";
+
+import ImageLogin from "../common/ImageLogin";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +47,7 @@ const Header = () => {
             
          { /*  <FontAwesomeIcon icon={faUser} className="icon" /> */}
 
-         <Image src={UserIcon} className="arrow" />
+         <ImageLogin src={UserIcon} className="arrow" />
 
 
           </div>
