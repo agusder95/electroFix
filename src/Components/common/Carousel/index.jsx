@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.scss";
 import Image from "../Image";
-import arrowNext from "../../../assets/images/home/flechaDerecha.png";
+import arrowNext from "../../../assets/images/home/arrow-next.png";
 import Button from "../Button";
 
 const Carousel = ({ images }) => {

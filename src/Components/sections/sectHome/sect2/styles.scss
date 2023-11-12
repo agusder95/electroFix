@@ -2,9 +2,9 @@
 
 .section2 {
   background-color: $secondary-color;
-  height: 24rem;
+  height: 20rem;
   // padding-top: 1rem;
-  padding-top: 60px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -13,12 +13,15 @@
 
   .h2 {
     padding-top: 1rem;
+
   }
 
   .block {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    text-align: left;
+
     padding: 0 1rem;
 
     .card {
@@ -29,14 +32,19 @@
       margin: 10px 0;
       padding: 0 1rem;
 
+
       .cardtit {
         font-weight: bold;
         font-size: 30px;
         margin-top: -15px;
         margin-left: 250px;
+   
+ 
       }
       p {
         margin-top: auto;
+     
+
       }
     }
   }

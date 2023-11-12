@@ -8,6 +8,15 @@ footer {
   justify-content: space-between;
   background-color: $black;
   color: $white;
+
+  .icono-flotante {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+
+  }
+
+
   height: 10rem;
   h2 {
     margin-left: 6rem;

@@ -4,16 +4,22 @@ import wspIcon from "../../assets/images/home/whatsapp.png";
 import faceIcon from "../../assets/images/home/facebook.png";
 import instaIcon from "../../assets/images/home/instagram.png";
 import Image from "../common/Image";
+import ImageFlot from "../common/ImageFlot";
 
 const Footer = () => {
   return (
     <footer>
+
+
+
+
       <h2>ElectroGestión - 2023</h2>
       <div className="socMedia">
         <ul>
           <li>
             <a href="">
-              <Image src={wspIcon} />
+           {  /*<Image src={wspIcon} />*/} 
+        
             </a>
           </li>
           <li>
@@ -23,7 +29,7 @@ const Footer = () => {
           </li>
           <li>
             <a href="">
-              <Image src={instaIcon} />
+         <Image src={instaIcon} /> 
             </a>
           </li>
         </ul>
