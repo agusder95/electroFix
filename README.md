@@ -1,13 +1,12 @@
 # Comandos para levantar por primera vez la App
 ```
-npx create-react-app
 npm i sass
 npm install react-router-dom
 ```
 
 ### levantar react
 ```
-npm start
+npm run dev
 ```
 ### matar procesos de node
 ```

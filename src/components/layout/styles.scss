@@ -1,0 +1,13 @@
+.LayoutWrapper {
+  a{
+    cursor: pointer;
+  }
+  .FloatIcon {
+    position: fixed;
+    right: 4rem;
+    bottom: 2rem;
+    .FloatIconImg{
+      width: 3rem;
+    }
+  }
+}
