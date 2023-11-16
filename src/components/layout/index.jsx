@@ -9,10 +9,16 @@ const Layout = ({ children }) => {
     <div className="LayoutWrapper">
       <Header />
       {children}
-      <a className="FloatIcon" >
+
+      <a className="FloatIcon">
         <Image className="FloatIconImg" src={FloatIcon} alt="FloatIconWsp" />
+
+        <div className="oval">
+          <p className="text">Contactános Aquí </p>
+        </div>
       </a>
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };
