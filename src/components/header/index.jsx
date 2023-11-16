@@ -10,6 +10,7 @@ import ServicesImg from "../../assets/images/home/hamb-menu/Services.png";
 import ProcessImg from "../../assets/images/home/hamb-menu/Process.png";
 import BlogImg from "../../assets/images/home/hamb-menu/Blog.png";
 import LoginImg from "../../assets/images/home/hamb-menu/Login.png";
+import ThemeImg from "../../assets/images/home/hamb-menu/theme.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,31 +69,48 @@ const Header = () => {
         style={{ display: showMobile ? "flex" : "none" }}
       >
         <HamburgerMenu className={"Mobile-Menu"}>
+          <div className="topBarColor"></div>
           <div className="titleHM">
-            <h1>electroFix</h1>
+            <h2>electroFix</h2>
             <p>El spa de tus electrodomésticos</p>
           </div>
           <div className="menuHM">
             <ul>
               <li>
                 <Image className={"imgHM"} src={HomeImg} alt="home" />
-                <p><a href="">Home</a></p>
+                <p>
+                  <a href="">Home</a>
+                </p>
               </li>
               <li>
                 <Image className={"imgHM"} src={ServicesImg} alt="services" />
-                <p><a href="">Servicios</a></p>
+                <p>
+                  <a href="">Servicios</a>
+                </p>
               </li>
               <li>
                 <Image className={"imgHM"} src={ProcessImg} alt="process" />
-                <p><a href="">Proceso</a></p>
+                <p>
+                  <a href="">Proceso</a>
+                </p>
               </li>
               <li>
                 <Image className={"imgHM"} src={BlogImg} alt="blog" />
-                <p><a href="">Blog</a></p>
+                <p>
+                  <a href="">Blog</a>
+                </p>
               </li>
               <li>
                 <Image className={"imgHM"} src={LoginImg} alt="login" />
-                <p><a href="">Login</a></p>
+                <p>
+                  <a href="">Login</a>
+                </p>
+              </li>
+              <li>
+                <Image className={"imgHM"} src={ThemeImg} alt="login" />
+                <p>
+                  <a href="">Modo Oscuro</a>
+                </p>
               </li>
             </ul>
           </div>

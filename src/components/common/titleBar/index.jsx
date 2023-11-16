@@ -3,7 +3,7 @@ import "./styles.scss"
 const Title = ({text, className}) => {
   return (
     <div className={`title ${className}`}>
-          <p>{text}</p>
+          <h2>{text}</h2>
     </div>
   )
 }

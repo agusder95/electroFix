@@ -9,7 +9,7 @@ const Sect3 = () => {
 
   return (
     <section className="section3">
-      <h2 id="title">Por qué electroFix?</h2>
+      <h2 id="title">Por qué <a>electroFix</a>?</h2>
 
       <div className="cardSection">
         <Card

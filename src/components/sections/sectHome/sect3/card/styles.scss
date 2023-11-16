@@ -1,3 +1,4 @@
+@import "../../../../../assets/scss/fonts.scss";
 .cardWrapper {
   display: flex;
   flex-direction: column;
@@ -16,15 +17,12 @@
     display: flex;
     justify-content: end;
     align-items: center;
-
-p{
-
-  padding-inline:0.5rem;
-}
-
-
-    h2 {
-      font-weight: normal;
+    h2{
+      font-family: $secondary-font;
+      font-weight: 100;
+    }
+    p {
+      padding-inline: 0.5rem;
     }
   }
 }
