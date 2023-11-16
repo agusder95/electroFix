@@ -12,10 +12,10 @@ const Layout = ({ children }) => {
 
       <a className="FloatIcon">
         <Image className="FloatIconImg" src={FloatIcon} alt="FloatIconWsp" />
-
-        <div className="oval">
           <p className="text">Contactános Aquí </p>
-        </div>
+
+        {/* <div className="oval">
+        </div> */}
       </a>
 
       <Footer />

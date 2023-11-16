@@ -1,5 +1,5 @@
 @import "../../../../assets/scss/colors.scss";
-
+@import "../../../../assets/scss/fonts.scss";
 .section2 {
   background-color: $secondary-color;
   height: 100%;
@@ -13,7 +13,17 @@
 
   h2 {
     padding: 1rem 0 2rem;
-
+    font-family: $headline;
+    font-weight: 300;
+    @media screen and (min-width: 320px) {
+      font-size: 1.5rem;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 3.5rem;
+    }
   }
 
   .block {
@@ -25,26 +35,23 @@
     padding: 0 1rem;
 
     .card {
+      position: relative;
       background-color: $white;
       min-height: 7rem;
-      max-height: 11rem;
       width: 18rem;
       margin: 10px 0;
-      padding: 0 1rem;
-
+      padding: 1rem;
 
       .cardtit {
-        font-weight: bold;
-        margin-top: -15px;
-        margin-left: 250px;
-        
+        position: absolute  ;
+        top: -19px;
+        right: 17px;
         p {
+          font-family: $headline;
+          font-weight: 400;
           font-size: 30px;
           margin-top: auto;
-       
-  
         }
-        
       }
     }
   }

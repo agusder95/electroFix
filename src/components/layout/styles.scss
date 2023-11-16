@@ -11,19 +11,15 @@
     display: flex;
 
     background-color: black;
-    border-radius: 50% / 100%;
+    border-radius: 20px;
+    padding: 15px 33px;
 
     .FloatIconImg {
       width: 3rem;
+      position: absolute;
+      top: 24px;
+      left: -15px;
     }
-  }
-
-  .oval {
-    background-color: black;
-    border-radius: 10px;
-    margin-left: 2px;
-    display: flex;
-    margin-bottom: 20px;
   }
 
   .text {
