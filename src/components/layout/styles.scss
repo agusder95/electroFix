@@ -2,18 +2,21 @@
   a {
     cursor: pointer;
   }
+
+margin-top: 3rem;
+
   .FloatIcon {
     position: fixed;
-    right: 4rem;
-    bottom: 2rem;
+    right: 8rem;
+    bottom: 4rem;
     justify-content: center;
 
     display: flex;
 
-    background-color: black;
-    border-radius: 20px;
-    padding: 15px 33px;
+  //  background-color: black;
+//    border-radius: 20px;
 
+    padding: 15px 33px;
     .FloatIconImg {
       width: 3rem;
       position: absolute;
@@ -21,10 +24,13 @@
       left: -15px;
     }
   }
-
+/*
   .text {
     color: white;
     display: flex;
+
     margin: auto;
   }
+
+  */
 }

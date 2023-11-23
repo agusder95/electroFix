@@ -1,0 +1,31 @@
+@import "../../assets/scss/colors.scss";
+
+.floatImag {
+  /*
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+
+
+  font-size: 1rem;
+
+  right: 20rem;
+
+  */
+  z-index: 9999;
+  position: fixed;
+  right: 8rem;
+  bottom: 35rem;
+  justify-content: center;
+
+  display: flex;
+
+  padding: 15px 33px;
+  .FloatIconImg {
+    width: 3rem;
+    //  position: absolute;
+    top: 14px;
+    left: -15px;
+  }
+}
