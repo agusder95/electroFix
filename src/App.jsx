@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="AppWrapper">
-   
+
       <MyRoutes />
     </div>
   );

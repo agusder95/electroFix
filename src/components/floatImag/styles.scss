@@ -15,17 +15,26 @@
   */
   z-index: 9999;
   position: fixed;
-  right: 8rem;
-  bottom: 35rem;
-  justify-content: center;
+
+  justify-content: right;
 
   display: flex;
 
+  right: 0rem;
+  top: 10rem;
+  padding: 15px;
+  transition: top 0.3s;
+
   padding: 15px 33px;
+
   .FloatIconImg {
     width: 3rem;
     //  position: absolute;
     top: 14px;
     left: -15px;
   }
+}
+
+.floatImag:is(header.shrink + .AppWrapper .floatImag) {
+  top: 5rem;
 }
