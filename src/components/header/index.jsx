@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 import Logo from "../../assets/images/home/Logo.png";
-import UserIcon from "../../assets/images/home/UserIcon.png";
+//import UserIcon from "../../assets/images/home/UserIcon.png";
+import UserIcon from "../../assets/images/home/lcono.svg";
 import Image from "../common/Image";
 import HamburgerMenu from "../common/HambMenu";
 import HomeImg from "../../assets/images/home/hamb-menu/Home.png";
@@ -14,7 +15,7 @@ import ThemeImg from "../../assets/images/home/hamb-menu/theme.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [user, setUser] = useState("login");
+  const [user, setUser] = useState("");
   const [showMobile, setShowMobile] = useState(window.innerWidth < 768);
   const [isOpen, setIsOpen] = useState(false);
 
