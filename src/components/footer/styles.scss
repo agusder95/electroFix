@@ -1,23 +1,81 @@
 @import "../../assets/scss/colors.scss";
+@import "../../assets/scss/fonts.scss";
+
 
 footer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: $black;
   color: $white;
-  height: 10rem;
-  h2 {
-    font-size: 1rem;
-    margin-left: 6rem;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+
+  .card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
   }
 
-  ul {
+  .card {
+
+
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90%;
+    padding: 30px;
+    margin:  10px;
+  }
+
+  h2 {
+    margin-top: -20px;
+    font-weight: 300;
+font-family: $headline;
+margin-bottom: 10px;
+
+  }
+
+  p{
+
+    margin-bottom: 20px;
+
+a{
+  
+  font-size:25px;
+  text-decoration: underline;
+ // font-family: $headline;
+}
+
+  }
+
+  .imagenes{
+    margin-bottom: 20px;
+    margin-top: 30px;
+
     display: flex;
+    flex-direction: row;
 
     li {
       margin-right: 2rem;
+      &:last-child {
+        margin-right: 0;
+      }
     }
+
+
+
   }
+
+
+
+
+.imagenes{
+  align-items: center;
+
+}
+
+
+
+
 }
