@@ -19,13 +19,13 @@ const FormHome = () => {
       />
       <Form
         name={"celNumber"}
-        text={"Numero de contacto"}
+        text={"Número de contacto"}
         type={"tel"}
-        placeholder={"Intrduce tu numero de contacto"}
+        placeholder={"Introduce tu número de contacto"}
       />
       <Form
         name={"description"}
-        text={"Descripcion de la falla"}
+        text={"Descripción de la falla"}
         type={"text"}
         placeholder={"Describe brevemente la falla de tu equipo"}
       />
