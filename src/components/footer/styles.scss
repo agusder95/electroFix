@@ -5,32 +5,26 @@ footer {
   background-color: $black;
   color: $white;
 
-  // align-items: center;
-
-  // width: 100%;
-
   .card-wrapper {
-    display: flex !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    flex-wrap: wrap;
 
-    justify-content: space-around !important;
-  }
-
-  @media screen and (max-width: 720px) {
-    .card-wrapper {
-      flex-wrap: wrap;
-
-      //  padding: 0 2rem;
-    }
+    padding: 0px;
+    margin: 0px;
   }
 
   .card {
     justify-content: space-around;
     align-items: flex-start;
+    flex: 1;
+    min-width: 300px;
 
     padding: 30px;
     margin: 10px;
-    width: 45% !important;
-    margin: 10px !important;
+  //  width: 45% !important;
+ //   margin: 10px !important;
   }
 
   h2 {
