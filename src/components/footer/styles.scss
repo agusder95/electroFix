@@ -6,25 +6,27 @@ footer {
   color: $white;
 
   .card-wrapper {
+    width: 90%; 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 16px;
-    flex-wrap: wrap;
+  //  flex-wrap: wrap;
 
-    padding: 0px;
-    margin: 0px;
+
+
+  
   }
 
   .card {
     justify-content: space-around;
     align-items: flex-start;
     flex: 1;
-    min-width: 300px;
 
-    padding: 30px;
-    margin: 10px;
-  //  width: 45% !important;
- //   margin: 10px !important;
+   
+    padding: 12px;
+    margin: 21px;
+    width: 90% 
+//   margin: 10px 
   }
 
   h2 {
@@ -36,13 +38,16 @@ footer {
     font-size: 25px;
   }
 
+
+
+
   p {
     margin-bottom: 20px;
 
     font-size: 14px;
 
     a {
-      font-size: 18px;
+      font-size: 15px;
       text-decoration: underline;
       // font-family: $headline;
     }
