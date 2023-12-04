@@ -2,13 +2,20 @@
 .hamburger-menu {
   position: relative;
   background-color: transparent;
-  width: 30px;
-  height: 20px;
+  width: 15px;
+  height: 1px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+margin-right: 10px;
+
   .toggle-button {
+
+
+
+
+
     background-color: transparent;
     border: none;
     z-index: 1;
@@ -16,7 +23,7 @@
   .bar1,
   .bar2,
   .bar3 {
-    width: 100%;
+    width: 98%;
     height: 3px;
     margin: 7px 0;
     background-color: $black;
@@ -51,5 +58,14 @@
     &.open {
       left: -100px;
     }
+
+
+
+
+
+
+
+
+
   }
 }
