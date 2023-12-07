@@ -2,8 +2,60 @@ import React from "react";
 import Form from "../../../../common/form";
 import "./styles.scss";
 import Button from "../../../../common/Button";
+
+
+const RegistroUsuario = () => {
+  const [usuario, setUsuario] = useState({
+    nombre: '',
+    apellido: '',
+    email: '',
+    contraseña: '',
+    rol: 'cliente'
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUsuario((prevUsuario) => ({
+      ...prevUsuario,
+      [name]: value
+    }));
+  };
+
+  const handleConfirmar = () => {
+   
+    console.log('Usuario registrado:', usuario);
+    
+    setUsuario({
+      nombre: '',
+      apellido: '',
+      email: '',
+      contraseña: '',
+      rol: 'cliente'
+    });
+  };
+
+  const handleCancelar = () => {
+   
+    setUsuario({
+      nombre: '',
+      apellido: '',
+      email: '',
+      contraseña: '',
+      rol: 'cliente'
+    });
+  };
+
+
+}
+
+
+
+
+
+
 const FormHome = () => {
   return (
+    
     <form className="formHome">
       <Form
         name={"fName"}
