@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+//  width: 100%;
+width: 100vw;
   height: 10rem;
   background-color: $primary-color;
   position: fixed;
@@ -30,7 +31,7 @@
     }
   }
   .logo {
-    margin-left: 1rem;
+    margin-left: 2rem;
     height: 60%;
   }
 
@@ -62,12 +63,16 @@
     }
   }
   .MenuMobile {
-  //  margin-right: 1rem;
+
     .Mobile-Menu {
       box-shadow: 0px 0px 51px 3px rgba(0, 0, 0, 0.57);
       -webkit-box-shadow: 0px 0px 51px 3px rgba(0, 0, 0, 0.57);
       -moz-box-shadow: 0px 0px 51px 3px rgba(0, 0, 0, 0.57);
       width: 320px;
+
+
+
+
       &.open {
         left: -260px;
       }
@@ -81,7 +86,9 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        margin: 0 70px 30px 34px;
+    //    margin: 0 70px 30px 34px;
+
+    margin: 0 100px 30px 10px;
         border-bottom: 1px solid $grey;
        // padding-top: 3rem;
 
