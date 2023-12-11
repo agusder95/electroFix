@@ -9,13 +9,13 @@ const Footer = () => {
   return (
     <footer>
 
-<div class="card-wrapper">
-      <div class="card">
+<div className="card-wrapper">
+      <div className="card">
         <h2>Copyright © 2023 electroFix </h2>
         <p> Desarrollado por: <br /><a>www.electrogestion.com</a>  </p>
       </div>
 
-      <div class="card">
+      <div className="card">
         <h2>Sobre nosotros </h2>
         <p>
           Somos electroFix una empresa de servicio técnico especializado,
@@ -24,7 +24,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div class="card">
+      <div className="card">
         <h2>Secciones </h2>
         <p>
           * Proceso <br />* Contacto <br />* Trabaja con nosotros<br /> * Preguntas frecuentes
@@ -32,7 +32,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div class="card">
+      <div className="card">
         <h2>Contactános </h2>
         <p>
           electrofix@electrofix.com <br />+54 11 5555 5555 <br />Av Corrientes, 3535, CABA

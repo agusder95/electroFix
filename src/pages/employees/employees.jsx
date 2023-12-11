@@ -25,6 +25,8 @@ const Employees = () => {
     <div className="employeesWraper">
       <h1 className="employeesTitle">Empleados</h1>
       <form className="employeesForm" onSubmit={FormHandler}>
+
+        
         <input
           type="text"
           placeholder="Nombre"

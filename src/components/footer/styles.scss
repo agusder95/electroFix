@@ -6,7 +6,8 @@ footer {
   color: $white;
 
   .card-wrapper {
-    width: 90%; 
+    width: 100%; 
+    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 16px;

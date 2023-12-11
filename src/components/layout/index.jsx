@@ -9,19 +9,6 @@ const Layout = ({ children }) => {
     <div className="LayoutWrapper">
       <Header />
       {children}
-{/*
-      <div className="FloatIcon">
-        <Image className="FloatIconImg" src={FloatIcon} alt="FloatIconWsp" />
-        <p className="text">Contactános Aquí </p>
-  */}
-        {/* <div className="oval">
-        </div> */}
-
-
-
- 
-  
-
 
       <Footer />
     </div>

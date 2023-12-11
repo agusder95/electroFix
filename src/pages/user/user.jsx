@@ -1,58 +1,54 @@
 import React, { useState } from "react";
 
-const BASE_URL =
-  "mysql://testing3:institutoweb@www.cursotesting.com.ar:3306/electroFix";
+import "./style.scss";
 
-const RegistroUsuario = () => {
+const BASE_URL = "https://electrofix-usuarios-y-roles.onrender.com/";
+
+const User = () => {
+  
   const [usuario, setUsuario] = useState({
-    nombre: "",
-    apellido: "",
-    email: "",
-    contraseña: "",
-    cuit: "",
-    telefono: "",
-    condicion_iva: "",
-    rol: "cliente",
+    nombre: '',
+    apellido: '',
+    email: '',
+    contraseña: '',
+    cuit: '',
+    telefono: '',
+    condicion_iva: '',
+//    rol: "cliente",
   });
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setUsuario((prevUsuario) => ({
-      ...prevUsuario,
-      [name]: value,
-    }));
+
+
+  const handleInputChange = (e) => {
+//    const { placeholder, value } = e.target;
+ //   setUsuario({ ...usuario, [placeholder]: value });
+
+   console.log(e);
   };
 
   const handleConfirmar = () => {
-    fetch(BASE_URL + "/usuario", {
+
+    
+ fetch(BASE_URL + "/usuario", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
 
-      data: "codigo 200. Usuario creado !",
       body: JSON.stringify(usuario),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
 
-      .catch((error) => {
-        console.error("Error al enviar datos al servidor:", error);
-      });
-  };
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      setRegisteredUser(data);
+    })
+    .catch(error => {
+      console.error('Error de petición al servidor:', error);
+    });
+};
 
-  setUsuario({
-    nombre: "",
-    apellido: "",
-    email: "",
-    contraseña: "",
-    cuit: "",
-    telefono: "",
-    condicion_iva: "",
-    rol: "cliente",
-  });
+
 
   const handleCancelar = () => {
     setUsuario({
@@ -67,102 +63,102 @@ const RegistroUsuario = () => {
     });
   };
 
+  const FormHandler = (e) => {
+     e.preventDefault();
+
+    if (!nombre || !apellido || !telefono || !email || !password) {
+      setError("Por favor complete todos los campos");
+      return;
+    }
+  };
+
   return (
-    <div className="formUsuario">
-      <h2>Registro de Usuario</h2>
-      <form>
-        <div>
-          <label htmlFor="nombre">Nombre:</label>
+    <div className="userWraper">
+      
+        <h1>Registro de Usuario</h1> 
+
+      <form onSubmit={handleConfirmar}>
+        <div className="form-group">
+          <label htmlFor="nombre"></label>
           <input
             type="text"
-            id="nombre"
-            name="nombre"
+            placeholder="Nombre"
             value={usuario.nombre}
-            onChange={handleInputChange}
-            required
+            onChange={handleInputChange} 
           />
         </div>
-        <div>
-          <label htmlFor="apellido">Apellido:</label>
+
+        <div className="form-group">
+          <label htmlFor="apellido"></label>
           <input
             type="text"
-            id="apellido"
-            name="apellido"
+            placeholder="Apellido"
             value={usuario.apellido}
-            onChange={handleInputChange}
-            required
+            onChange={handleInputChange} 
           />
         </div>
-        <div>
-          <label htmlFor="email">E-Mail:</label>
+
+        <div className="form-group">
+          <label htmlFor="email"></label>
           <input
-            type="email"
-            id="email"
-            name="email"
+            type="text"
+            placeholder="Email"
             value={usuario.email}
-            onChange={handleInputChange}
-            required
+            onChange={handleInputChange} 
           />
         </div>
-        <div>
-          <label htmlFor="contraseña">Contraseña:</label>
+
+        <div className="form-group">
+          <label htmlFor="contraseña"></label>
           <input
-            type="password"
-            id="contraseña"
-            name="contraseña"
+            type="text"
+            placeholder="Contraseña"
             value={usuario.contraseña}
-            onChange={handleInputChange}
-            required
+            onChange={handleInputChange} 
           />
         </div>
 
-        <div>
-          <label htmlFor="cuit">Cuit:</label>
+        <div className="form-group">
+          <label htmlFor="cuit"></label>
           <input
-            type="cuit"
-            id="cuit"
-            name="cuit"
+            type="text"
+            placeholder="Cuit"
             value={usuario.cuit}
-            onChange={handleInputChange}
-            required
+            onChange={handleInputChange} 
           />
         </div>
 
-        <div>
-          <label htmlFor="telefono">Teléfono:</label>
+        <div className="form-group">
+          <label htmlFor="telefono"></label>
           <input
-            type="telefono"
-            id="telefono"
-            name="telefono"
+            type="text"
+            placeholder="telefono"
             value={usuario.telefono}
-            onChange={handleInputChange}
-            required
+            onChange={handleInputChange} 
           />
         </div>
 
-        <div>
-          <label htmlFor="condicion_iva">Condicion de iva:</label>
+        <div className="form-group">
+          <label htmlFor="condicion_iva"></label>
           <input
-            type="condicion_iva"
-            id="tcondicion_iva"
-            name="condicion_iva"
+            type="text"
+            placeholder="condicion_iva"
             value={usuario.condicion_iva}
-            onChange={handleInputChange}
-            required
+            onChange={handleInputChange} 
           />
         </div>
 
-        <div>
-          <button type="button" onClick={handleCancelar}>
-            Cancelar
-          </button>
-          <button type="button" onClick={handleConfirmar}>
-            Confirmar
-          </button>
-        </div>
+   {/*    {error && <p className="error"> {error} </p>} */} 
+
+        <button type="button" onClick={handleCancelar}>
+          Cancelar
+        </button>
+        <button type="submit" onClick={handleConfirmar}>
+          Confirmar
+        </button>
       </form>
     </div>
   );
 };
 
-export default RegistroUsuario;
+export default User;
