@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./style.scss";
 
@@ -14,14 +14,37 @@ const User = () => {
     cuit: "",
     telefono: "",
     condicion_iva: "",
-    rol:[],
+    rol: 0,
   });
+
+  const [mostrarSeleccionarRol, setMostrarSeleccionarRol] = useState(true);
+  const formRef = React.createRef();
+
+
+  useEffect(() => {
+    if (usuario.rol !== 0) {
+      fetch(BASE_URL + `/usuario/${usuario.rol}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Datos de rol del servidor: ", data);
+
+          
+        })
+        .catch((error) => {
+          console.error("Error de petición de rol al servidor:", error);
+        });
+    }
+  }, [usuario.rol]);
 
   const handleInputChange = (event) => {
     let { name, value } = event.target;
 
+    if (name === "rol" && mostrarSeleccionarRol) {
+      setMostrarSeleccionarRol(false);
+    }
+
     if (name === "id" || name === "cuit" || name === "telefono") {
-      console.log("CASTING"); 
+      console.log("CASTING");
       value = Number(value);
     }
 
@@ -45,37 +68,33 @@ const User = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setRegisteredUser(data);
+
+        formRef.current.reset();
+
+        setUsuario({
+          id: "",
+          first_name: "",
+          last_name: "",
+          email: "",
+          password: "",
+          cuit: "",
+          telefono: "",
+          condicion_iva: "",
+          rol: 0,
+        });
+
+  
+        setMostrarSeleccionarRol(true);
+
+        alert("registro de usuario exitoso ! ");
+
       })
       .catch((error) => {
         console.error("Error de petición al servidor:", error);
       });
   };
 
-  const handleRol = (e) => {
-    e.preventDefault();
-
-    fetch(BASE_URL + "/usuario/rol", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      body: JSON.stringify(usuario.rol),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setRegisteredUser(data);
-      })
-      .catch((error) => {
-        console.error("Error de petición al servidor:", error);
-      });
-  };
-
-
-
-
+ 
 
   const handleCancelar = () => {
     setUsuario({
@@ -103,7 +122,17 @@ const User = () => {
     <div className="userWraper">
       <h1>Registro de Usuario</h1>
 
-      <form onSubmit={handleConfirmar}>
+      <form ref={formRef} onSubmit={handleConfirmar}>
+        <div className="form-group">
+          <label htmlFor="rol">Rol</label>
+          <select name="rol" value={usuario.rol} onChange={handleInputChange}>
+            <option value="">Seleccionar Rol</option>
+            <option value={1}>Técnico</option>
+            <option value={2}>Administrativo</option>
+            <option value={3}>Atención al Cliente</option>
+          </select>
+        </div>
+
         <div className="form-group">
           <label htmlFor="id"></label>
           <input
@@ -193,34 +222,13 @@ const User = () => {
           />
         </div>
 
-
-
-        <div className="form-group">
-        <label htmlFor="rol">Rol</label>
-        <select
-          type="text"
-          placeholder="Rol"
-          className="RolItem"
-          value={usuario.rol}
-          name="rol"
-          onChange={handleRol}
-        >
-          <option value="">Seleccionar rol</option>
-          <option value={1}>Técnico</option>
-          <option value={2}>Administrativo</option>
-          <option value={3}>Atención al cliente</option>
-        </select>
-        </div>
-
-
-
         {/*    {error && <p className="error"> {error} </p>} */}
 
         <div className="confirm">
           <button type="button" onClick={handleCancelar}>
             Cancelar
           </button>
-          <button type="submit" onClick={handleConfirmar}>
+          <button ref={formRef} type="submit" onClick={handleConfirmar}>
             Confirmar
           </button>
         </div>
