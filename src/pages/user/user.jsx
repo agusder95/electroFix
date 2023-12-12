@@ -2,34 +2,39 @@ import React, { useState } from "react";
 
 import "./style.scss";
 
-const BASE_URL = "https://electrofix-usuarios-y-roles.onrender.com/";
+const BASE_URL = "https://electrofix-usuarios-y-roles.onrender.com";
 
 const User = () => {
-  
   const [usuario, setUsuario] = useState({
-    nombre: '',
-    apellido: '',
-    email: '',
-    contraseña: '',
-    cuit: '',
-    telefono: '',
-    condicion_iva: '',
-//    rol: "cliente",
+    id: "",
+    first_name: "",
+    last_name: "",
+    email: "",
+    password: "",
+    cuit: "",
+    telefono: "",
+    condicion_iva: "",
+    rol:[],
   });
 
+  const handleInputChange = (event) => {
+    let { name, value } = event.target;
 
+    if (name === "id" || name === "cuit" || name === "telefono") {
+      console.log("CASTING"); 
+      value = Number(value);
+    }
 
-  const handleInputChange = (e) => {
-//    const { placeholder, value } = e.target;
- //   setUsuario({ ...usuario, [placeholder]: value });
-
-   console.log(e);
+    setUsuario((prevUsuario) => ({
+      ...prevUsuario,
+      [name]: value,
+    }));
   };
 
-  const handleConfirmar = () => {
+  const handleConfirmar = (e) => {
+    e.preventDefault();
 
-    
- fetch(BASE_URL + "/usuario", {
+    fetch(BASE_URL + "/usuario/clientes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,16 +42,38 @@ const User = () => {
 
       body: JSON.stringify(usuario),
     })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setRegisteredUser(data);
+      })
+      .catch((error) => {
+        console.error("Error de petición al servidor:", error);
+      });
+  };
 
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      setRegisteredUser(data);
+  const handleRol = (e) => {
+    e.preventDefault();
+
+    fetch(BASE_URL + "/usuario/rol", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify(usuario.rol),
     })
-    .catch(error => {
-      console.error('Error de petición al servidor:', error);
-    });
-};
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setRegisteredUser(data);
+      })
+      .catch((error) => {
+        console.error("Error de petición al servidor:", error);
+      });
+  };
+
+
 
 
 
@@ -62,7 +89,7 @@ const User = () => {
       rol: "cliente",
     });
   };
-
+  /*
   const FormHandler = (e) => {
      e.preventDefault();
 
@@ -71,20 +98,30 @@ const User = () => {
       return;
     }
   };
-
+*/
   return (
     <div className="userWraper">
-      
-        <h1>Registro de Usuario</h1> 
+      <h1>Registro de Usuario</h1>
 
       <form onSubmit={handleConfirmar}>
+        <div className="form-group">
+          <label htmlFor="id"></label>
+          <input
+            type="text"
+            placeholder="DNI"
+            value={usuario.id}
+            name="id"
+            onChange={handleInputChange}
+          />
+        </div>
         <div className="form-group">
           <label htmlFor="nombre"></label>
           <input
             type="text"
             placeholder="Nombre"
-            value={usuario.nombre}
-            onChange={handleInputChange} 
+            value={usuario.first_name}
+            name="first_name"
+            onChange={handleInputChange}
           />
         </div>
 
@@ -93,8 +130,9 @@ const User = () => {
           <input
             type="text"
             placeholder="Apellido"
-            value={usuario.apellido}
-            onChange={handleInputChange} 
+            value={usuario.last_name}
+            name="last_name"
+            onChange={handleInputChange}
           />
         </div>
 
@@ -104,17 +142,19 @@ const User = () => {
             type="text"
             placeholder="Email"
             value={usuario.email}
-            onChange={handleInputChange} 
+            name="email"
+            onChange={handleInputChange}
           />
         </div>
 
         <div className="form-group">
           <label htmlFor="contraseña"></label>
           <input
-            type="text"
+            type="password"
             placeholder="Contraseña"
-            value={usuario.contraseña}
-            onChange={handleInputChange} 
+            value={usuario.password}
+            name="password"
+            onChange={handleInputChange}
           />
         </div>
 
@@ -122,9 +162,11 @@ const User = () => {
           <label htmlFor="cuit"></label>
           <input
             type="text"
+            inputMode="numeric"
             placeholder="Cuit"
             value={usuario.cuit}
-            onChange={handleInputChange} 
+            name="cuit"
+            onChange={handleInputChange}
           />
         </div>
 
@@ -132,9 +174,11 @@ const User = () => {
           <label htmlFor="telefono"></label>
           <input
             type="text"
+            inputMode="numeric"
             placeholder="telefono"
             value={usuario.telefono}
-            onChange={handleInputChange} 
+            name="telefono"
+            onChange={handleInputChange}
           />
         </div>
 
@@ -144,18 +188,42 @@ const User = () => {
             type="text"
             placeholder="condicion_iva"
             value={usuario.condicion_iva}
-            onChange={handleInputChange} 
+            name="condicion_iva"
+            onChange={handleInputChange}
           />
         </div>
 
-   {/*    {error && <p className="error"> {error} </p>} */} 
 
-        <button type="button" onClick={handleCancelar}>
-          Cancelar
-        </button>
-        <button type="submit" onClick={handleConfirmar}>
-          Confirmar
-        </button>
+
+        <div className="form-group">
+        <label htmlFor="rol">Rol</label>
+        <select
+          type="text"
+          placeholder="Rol"
+          className="RolItem"
+          value={usuario.rol}
+          name="rol"
+          onChange={handleRol}
+        >
+          <option value="">Seleccionar rol</option>
+          <option value={1}>Técnico</option>
+          <option value={2}>Administrativo</option>
+          <option value={3}>Atención al cliente</option>
+        </select>
+        </div>
+
+
+
+        {/*    {error && <p className="error"> {error} </p>} */}
+
+        <div className="confirm">
+          <button type="button" onClick={handleCancelar}>
+            Cancelar
+          </button>
+          <button type="submit" onClick={handleConfirmar}>
+            Confirmar
+          </button>
+        </div>
       </form>
     </div>
   );
